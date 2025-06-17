@@ -13,6 +13,12 @@ wss.on('connection', socket => {
     socket.send("Hello from server!");
 });
 
+// testing
+wss.on('message', message => {
+    console.log("Received message:", message);
+    socket.send("Message received :)");
+});
+
 app.get('/', (req, res) => res.send("API working"));
 
 mongoose.connect(process.env.MONGO_URI)

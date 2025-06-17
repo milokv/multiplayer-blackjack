@@ -1,23 +1,25 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  align-self: center;
   padding: 1%;
-  width: 30vw;
+  width: 50vw;
   z-index: 100;
 }
 
 .link {
-  background-color: rgb(93, 88, 88);
-  padding: 1.5vh 2vw;
+  background-color: rgb(88, 88, 88);
+  padding: 1.5vh 2.5vw;
   color: white;
   text-decoration: none;
+  text-align: center;
   border-radius: 1rem;
   margin: 0 0.5rem;
 }
 
 .link:hover {
-  background-color:  rgb(73, 68, 68);
+  background-color:  rgb(68, 68, 68);
   color: rgb(158, 158, 158)
 }
 
@@ -31,7 +33,8 @@
 
 @media only screen and (max-width: 600px) {
   .navbar {
-    width: 80vw;
+    width: 60vw;
+    display: flex;
     flex-direction: row;
     align-items: center;
   }
@@ -39,6 +42,7 @@
   .link {
     width: 5rem;
     height: 1rem;
+    padding: 1.5vh 2.5vw;
     text-align: center;
     size: 1rem;
     border-radius: 1rem;
