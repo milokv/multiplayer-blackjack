@@ -2,9 +2,9 @@ import type { JSX } from "react";
 
 const Stats = (): JSX.Element => {
   return (
-    <div>
+    <div  style={{ padding: '2rem' }}>
       <h1>📊 Stats Page</h1>
-      <p>View win/loss records and leaderboard.</p>
+      <h3>View win/loss records and leaderboard.</h3>
     </div>
   );
 };

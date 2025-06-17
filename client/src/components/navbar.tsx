@@ -1,13 +1,19 @@
 import type { JSX } from "react";
 import { Link } from "react-router-dom";
-import style from '/src/navbar.module.css';
+import style from '/src/style/navbar.module.css';
 
-const Navbar = (): JSX.Element => {
+type NavbarProps = {
+  fixed?: boolean;
+};
+
+const Navbar = ({ fixed = true }: NavbarProps): JSX.Element => {
+  const navbarClass = fixed ? `${style.navbar} ${style.fixed}` : style.navbar;
+
   return (
-    <nav className={style.navbar}>
-      <div className={style.navbarCenter}><Link to="/game/" className={style.link}>GAME</Link></div>
-      <div className={style.navbarCenter}><Link to="/" className={style.link}>HOME</Link></div>
-      <div className={style.navbarCenter}><Link to="/stats/" className={style.link}>STATS</Link></div>
+    <nav className={navbarClass}>
+      <Link className={style.link} to="/">HOME</Link>
+      <Link className={style.link} to="/game">GAME</Link>
+      <Link className={style.link} to="/stats">STATS</Link>
     </nav>
   );
 };
