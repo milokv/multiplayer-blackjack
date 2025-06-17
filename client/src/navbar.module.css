@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+.link {
+  background-color: rgb(93, 88, 88);
+  padding: 0.8rem 1.6rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+}
+
+.link:hover {
+  background-color:  rgb(73, 68, 68);
+  color: rgb(158, 158, 158)
+}

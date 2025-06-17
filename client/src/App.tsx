@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Game from './pages/game';
 import Stats from './pages/stats';
+import Navbar from './components/navbar';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/game" element={<Game />} />
         <Route path="/stats" element={<Stats />} />
       </Routes>
+        <Navbar />
     </Router>
   );
 }
