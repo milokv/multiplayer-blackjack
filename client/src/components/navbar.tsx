@@ -12,7 +12,7 @@ const Navbar = ({ fixed = true }: NavbarProps): JSX.Element => {
   return (
     <nav className={navbarClass}>
       <Link className={style.link} to="/">HOME</Link>
-      <Link className={style.link} to="/game">GAME</Link>
+      <Link className={style.link} to="/game">BLACKJACK</Link>
       <Link className={style.link} to="/stats">STATS</Link>
     </nav>
   );
