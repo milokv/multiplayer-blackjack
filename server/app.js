@@ -1,12 +1,17 @@
-const express = require('express');
-const http = require('http');
-const WebSocket = require('ws');
-const mongoose = require('mongoose');
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import usersRouter from './routes/users.js'; // 👈 path to the route you just made
+import http from 'http';
+import { WebSocketServer } from 'ws';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+const wss = new WebSocketServer({ server });
+
+app.use(express.json());
+app.use('/api/users', usersRouter);
 
 wss.on('connection', socket => {
     console.log("A client connected!");
@@ -14,6 +19,7 @@ wss.on('connection', socket => {
 
 
     socket.on('message', message => {
+        // debugging: log when a message is received
         console.log("Received message:", message.toString());
         socket.send("Message received");
     });

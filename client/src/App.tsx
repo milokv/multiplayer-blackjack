@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import type { JSX } from 'react';
 import './style/App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
