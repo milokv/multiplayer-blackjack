@@ -33,15 +33,16 @@
 
 @media only screen and (max-width: 600px) {
   .navbar {
-    width: 60vw;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   .link {
-    width: 5rem;
-    height: 1rem;
+    width: 30vw;
+    height: 3vh;
     padding: 1.5vh 2.5vw;
     text-align: center;
     size: 1rem;

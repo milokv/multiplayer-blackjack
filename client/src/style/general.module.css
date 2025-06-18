@@ -1,0 +1,25 @@
+.smallButton {
+    padding: 0.5em 1em;
+    margin: 2vw;
+    width: 8vw;
+    height: 5vh;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+    background-color: rgb(88, 88, 88);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.inputForm {
+    width: 8vw;
+    height : 4.2vh;
+    font-size: large;
+}
+
+.usernameDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

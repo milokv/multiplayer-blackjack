@@ -9,32 +9,6 @@ import Navbar from './components/navbar';
 
 function App() {
 
-  // ✅ WebSocket connection setup
-  useEffect(() => {
-    const socket = new WebSocket('ws://localhost:3001');
-
-    socket.onopen = () => {
-      console.log('✅ WebSocket connected');
-    };
-
-    socket.onmessage = (msg: MessageEvent) => {
-      console.log('📨 From server:', msg.data);
-    };
-
-    socket.onerror = (err) => {
-      console.error('❌ WebSocket error:', err);
-    };
-
-    socket.onclose = () => {
-      console.log('🔌 WebSocket disconnected');
-    };
-
-    // Cleanup on unmount
-    return () => {
-      socket.close();
-    };
-  }, []);
-
   const LayoutWrapper = (): JSX.Element => {
   const location = useLocation();
   const isHome = location.pathname === "/";

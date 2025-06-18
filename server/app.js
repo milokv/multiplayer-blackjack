@@ -11,13 +11,14 @@ const wss = new WebSocket.Server({ server });
 wss.on('connection', socket => {
     console.log("A client connected!");
     socket.send("Hello from server!");
+
+
+    socket.on('message', message => {
+        console.log("Received message:", message.toString());
+        socket.send("Message received");
+    });
 });
 
-// testing
-wss.on('message', message => {
-    console.log("Received message:", message);
-    socket.send("Message received :)");
-});
 
 app.get('/', (req, res) => res.send("API working"));
 
