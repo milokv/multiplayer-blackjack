@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import usersRouter from './routes/users.js'; // 👈 path to the route you just made
 import http from 'http';
 import { WebSocketServer } from 'ws';
+import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -10,6 +11,7 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
 
+app.use(cors());
 app.use(express.json());
 app.use('/api/users', usersRouter);
 

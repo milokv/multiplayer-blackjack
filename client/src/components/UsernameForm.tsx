@@ -28,7 +28,7 @@ const UsernameForm = (): JSX.Element => {
             body: JSON.stringify({ username }),
         })
         .then(res => res.json())
-        .then(data => console.log("✅ User saved:", data));
+        .then(data => console.log("User saved:", data));
 
         navigate("/game");
     };
